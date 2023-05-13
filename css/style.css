@@ -36,6 +36,8 @@ header
     top:0;
     right:0;
     background-color:rgba(0,0,0,0.5);
+    text-align:right;
+    line-height:100px;
 }
 
 main
@@ -55,6 +57,20 @@ footer
     left:0;
     background-color:#282828;
     color:white;
+}
+
+/* Header */
+
+header .button
+{
+    text-decoration:none;
+    color:white;
+    border:1px solid white;
+    font-weight:bold;
+    padding:15px 40px;
+    border-radius:30px;
+    margin-right:5px;
+    font-size:12px;
 }
 
 /* Responsive */
