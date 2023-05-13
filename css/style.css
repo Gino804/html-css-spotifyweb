@@ -19,19 +19,23 @@ body
 
 .sidenav
 {
-    width:80px;
-    height:calc(100vh - 100px);
+    width:60px;
+    height:calc(100vh - 80px);
     position:fixed;
     top:0;
     left:0;
     background-color:black;
     color:#4C4C4C;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    font-weight:bold;
 }
 
 header
 {
     height:100px;
-    width:calc(100vw - 80px);
+    width:calc(100vw - 60px);
     position:fixed;
     top:0;
     right:0;
@@ -42,21 +46,166 @@ header
 
 main
 {
-    padding-top:100px;
-    margin-left:80px;
+    padding-top:80px;
+    margin-left:60px;
     overflow:auto;
-    height:calc(100vh - 100px);
+    height:calc(100vh - 80px);
 }
 
 footer
 {
-    height:100px;
+    height:80px;
     width:100vw;
     position:fixed;
     bottom:0;
     left:0;
     background-color:#282828;
     color:white;
+}
+
+ul
+{
+    list-style-type:none;
+}
+
+/* Sidenav */
+
+.navbar-top img
+{
+    width:30px;
+}
+
+.sidenav>div
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.sidenav .logo-small
+{
+    margin-top:5px;
+}
+
+.sidenav .logo
+{
+    display:none;
+    width:140px;
+    margin:20px 0;
+}
+
+.sidenav .search,.library
+{
+    filter: invert(59%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(89%) contrast(91%);
+}
+
+.nav-item
+{
+    display:flex;
+    align-items:center;
+    margin-top:10px;
+}
+
+.nav-item p 
+{
+    display:none;
+    padding-left:5px;
+    font-size:15px;
+}
+
+.nav-item.selected p
+{
+    color:white;
+}
+
+.navbar-top
+{
+    position:relative;
+}
+
+.nav-item.selected .selection-bar
+{
+    display:none;
+    height:30px;
+    width:3px;
+    background-color:greenyellow;
+    position:relative;
+    right:20px;
+}
+
+.playlist
+{
+    display:none;
+}
+
+.playlist h3
+{
+    color:white;
+    font-size:17px;
+    margin-top:20px;
+}
+
+.playlist .add-playlist
+{
+    color:black;
+    background-color:#A3A3A3;
+    width:40px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    font-size:40px;
+    margin-right:5px;
+}
+
+.playlist li
+{
+    font-size:13px;
+    margin:15px 0;
+}
+
+.nav-item.install p
+{
+    font-size:13px;
+}
+
+.sidenav .fa-circle-down
+{
+    font-size:12px;
+}
+
+.sidenav .separator
+{
+    display:none;
+    height:1px;
+    width:100%;
+    background-color:#A3A3A3;
+    margin-top:15px;
+}
+
+.profile
+{
+    width:80%;
+    height:80%;
+    object-fit:contain;
+}
+
+.profile-container
+{
+    width:30px;
+    height:30px;
+    background-color:gray;
+    border-radius:50%;
+    text-align:center;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+.nav-item.user h3
+{
+    display:none;
+    color:white;
+    margin-left:5px;
+    font-size:15px;
 }
 
 /* Header */
@@ -90,5 +239,60 @@ header .button
     main 
     {
         margin-left:250px;
+    }
+
+    .sidenav
+    {
+        padding:0 20px;
+    }
+
+    .sidenav>div
+    {
+        align-items:flex-start;
+    }
+
+    .sidenav .logo-small
+    {
+        display:none;
+    }
+
+    .sidenav .logo
+    {
+        display:block;
+    }
+
+    .nav-item p 
+    {
+        display:block;
+    }
+
+    .nav-item.selected .selection-bar
+    {
+        display:block;
+    }
+
+    .playlist
+    {
+        display:block;
+    }
+
+    .sidenav .separator
+    {
+        display:block;
+    }
+
+    .nav-item.user
+    {
+        margin-bottom:10px;
+    }
+
+    .nav-item.user h3
+    {
+        display:block;
+    }
+
+    .profile-container
+    {
+        margin:0;
     }
 }
