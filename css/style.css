@@ -61,6 +61,23 @@ footer
     left:0;
     background-color:#282828;
     color:white;
+    display:flex;
+}
+
+/* Utils */
+
+.bar 
+{
+    height:5px;
+    border-radius:3px;
+    background-color:#5A5A5A;
+}
+
+.bar>div 
+{
+    height:100%;
+    border-radius:3px;
+    background-color:#C1C1C1;
 }
 
 ul
@@ -222,6 +239,117 @@ header .button
     font-size:12px;
 }
 
+/* Footer */
+
+footer>div
+{
+    flex-basis:calc(100% / 3);
+}
+
+.footer-left
+{
+    display:flex;
+    margin-top:20px;
+}
+
+.footer-left img
+{
+    width:50px;
+    height:50px;
+    margin:0 10px;
+}
+
+.footer-left p 
+{
+    font-size:12px;
+    color:#757575;
+    font-weight:bold;
+}
+
+.footer-left .icons
+{
+    color:#757575;
+    margin-left:20px;
+    line-height:25px;
+}
+
+.footer-center
+{
+    padding-left:20px;
+    margin-top:15px;
+}
+
+.footer-center>div
+{
+    display:flex;
+}
+
+.footer-center .toolbar
+{
+    width:180px;
+    margin:0 auto;
+}
+
+.footer-center .toolbar>i 
+{
+    flex-basis:20%;
+}
+
+.footer-center .fa-circle-play
+{
+    font-size:30px;
+    margin-right:18px;
+    margin-top:-6px;
+}
+
+.footer-center .bar-container
+{
+    margin-top:12px;
+    align-items:center;
+    font-weight:bold;
+}
+
+.footer-center .bar 
+{
+    width:90%;
+    margin:0 5px;
+}
+
+.footer-center .bar>div 
+{
+    width:20px;
+}
+
+.footer-center p 
+{
+    font-size:10px;
+}
+
+.footer-right
+{
+    display:flex;
+    height:100%;
+    align-items:center;
+    justify-content:flex-end;
+}
+
+.footer-right i 
+{
+    padding:0 8px;
+    font-size:12px;
+}
+
+.footer-right .bar 
+{
+    width:80px;
+    margin-right:5px;
+}
+
+.footer-right .bar>div 
+{
+    width:15px;
+}
+
 /* Responsive */
 
 @media screen and (min-width: 576px)
@@ -294,5 +422,18 @@ header .button
     .profile-container
     {
         margin:0;
+    }
+
+    .footer-left .song-name
+    {
+        margin-top:10px;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .footer-left .icons
+    {
+        margin-top:12px;
     }
 }
