@@ -46,7 +46,7 @@ header
 
 main
 {
-    padding-top:80px;
+    padding:120px 30px 20px 20px;
     margin-left:60px;
     overflow:auto;
     height:calc(100vh - 80px);
@@ -62,6 +62,29 @@ footer
     background-color:#282828;
     color:white;
     display:flex;
+}
+
+ul
+{
+    list-style-type:none;
+}
+
+h2
+{
+    color:white;
+    font-size:25px;
+}
+
+h3
+{
+    color:white;
+    font-size:14px;
+}
+
+h4
+{
+    color:#74767B;
+    font-size:11px;
 }
 
 /* Utils */
@@ -80,9 +103,10 @@ footer
     background-color:#C1C1C1;
 }
 
-ul
+.row
 {
-    list-style-type:none;
+    display:flex;
+    flex-wrap:wrap;
 }
 
 /* Sidenav */
@@ -237,6 +261,76 @@ header .button
     border-radius:30px;
     margin-right:5px;
     font-size:12px;
+}
+
+/* Main */
+
+.nav-menu ul 
+{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.nav-menu a 
+{
+    color:#616368;
+    font-weight:bold;
+    font-size:14px;
+    text-decoration:none;
+}
+
+.nav-menu ul>li
+{
+    padding:20px 10px;
+}
+
+.nav-menu .selected>div 
+{
+    height:3px;
+    width:40px;
+    border-radius:3px;
+    background-color:#93D72D;
+    margin:0 auto;
+}
+
+.recently-played h2
+{
+    padding-left:10px;
+    margin:20px 0;
+}
+
+main .column
+{
+    flex-basis:50%;
+    padding:10px;
+    text-align:center;
+}
+
+main img
+{
+    width:100%;
+}
+
+main h3
+{
+    margin:10px 0;
+}
+
+.personal-section, .artists
+{
+    margin-top:30px;
+}
+
+.personal-section h4, .artists h4
+{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.artists img
+{
+    border-radius:50%;
 }
 
 /* Footer */
@@ -435,5 +529,18 @@ footer>div
     .footer-left .icons
     {
         margin-top:12px;
+    }
+
+    main .column
+    {
+        flex-basis:25%;
+    }
+}
+
+@media screen and (min-width: 992px)
+{
+    main .column
+    {
+        flex-basis:calc(100% / 6);
     }
 }
